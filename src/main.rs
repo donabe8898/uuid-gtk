@@ -19,7 +19,7 @@ fn build_ui(application: &gtk::Application) {
 
     let vbox = gtk::Box::builder()
         .orientation(gtk::Orientation::Vertical)
-        .halign(gtk::Align::Start)
+        .halign(gtk::Align::Center)
         .spacing(10)
         .margin_bottom(10)
         .margin_top(10)
@@ -29,6 +29,7 @@ fn build_ui(application: &gtk::Application) {
 
     // 子へ
     window.set_child(Some(&vbox));
+
     let uuid_txt = gtk::Text::new();
     let button = gtk::Button::with_label("Gen UUID");
 
